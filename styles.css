@@ -1,0 +1,104 @@
+:root {
+  --background-color: #2C3E50;
+  --card-background: #1b233d;
+  --primary-color: #3498DB;
+  --primary-hover-color: #2980B9;
+  --text-color: #ECF0F1;
+  --card-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  --gradient-bg: linear-gradient(45deg, rgb(4, 159, 187) 0%, rgb(80, 246, 255) 100%);
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: 230px;
+  border-radius: 20px;
+  background: var(--card-background);
+  padding: 20px;
+  margin: 50px auto;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-bg);
+  border-radius: 15px;
+  width: 100%;
+  padding: 20px;
+}
+
+.card .top-section h2,
+.card .top-section #moon-phase {
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+.card .top-section h2 {
+  font-size: 18px;
+}
+
+.card .top-section #moon-phase {
+  font-size: 24px;
+}
+
+.card .bottom-section {
+  margin-top: 15px;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.card .bottom-section .title {
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.card .bottom-section .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.card .bottom-section .form-group input[type="text"],
+.card .bottom-section .form-group button {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.card .bottom-section .form-group button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card .bottom-section .form-group button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.getbtn:hover {
+  transform: scale(1.05);
+}
